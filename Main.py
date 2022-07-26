@@ -94,9 +94,9 @@ def user_defined_paremeters():
     fc = st.sidebar.slider('Compressive strength of concrete, fc (MPa)', float(df['fc'].min()), 
                             float(df['fc'].max()),
                             float(df['fc'][t]))
-    rohfl = st.sidebar.slider('FRP longitudinal reinforcement ratio , rohfl (%)', float(df['rohfl'].min()), 
-                            float(df['rohfl'].max()),
-                            float(df['rohfl'][t]))    
+    rohfl = st.sidebar.slider('FRP longitudinal reinforcement ratio , rohfl (‰)', float(10*df['rohfl'].min()), 
+                            float(10*df['rohfl'].max()),
+                            float(10*df['rohfl'][t]))    
     Efl = st.sidebar.slider('Elastic modulus of longitudinal FRP reinforcement, Efl (GPa)', float(df['Efl'].min()/1000), 
                             float(df['Efl'].max()/1000),
                             float(df['Efl'][t]/1000))   
@@ -105,9 +105,9 @@ def user_defined_paremeters():
                             float(df['fful'][t]))
     FRP_long_type1 = st.sidebar.radio('FRP longitudinal bar type', ('AFRP', 'BFRP', 'CFRP', 'GFRP'))
 
-    rohfw = st.sidebar.slider('FRP shear reinforcement ratio , rohfv (%)', float(df['rohfw'].min()), 
-                            float(df['rohfw'].max()),
-                            float(df['rohfw'][t]))    
+    rohfw = st.sidebar.slider('FRP shear reinforcement ratio , rohfv (‰)', float(10*df['rohfw'].min()), 
+                            float(10*df['rohfw'].max()),
+                            float(10*df['rohfw'][t]))    
     Efw = st.sidebar.slider('Elastic modulus of transverse FRP reinforcement, Efw (GPa)', float(df['Efw'].min()/1000), 
                             float(df['Efw'].max()/1000),
                             float(df['Efw'][t]/1000))    
@@ -176,6 +176,8 @@ st.markdown(html_temp, unsafe_allow_html=True)
 st.write('#### Beam geometry and mechanical properties of material')
 
 df2 = df1.copy(deep=True)
+df2['rohfw']=df1['rohfw']*0.1
+df2['rohfl']=df1['rohfl']*0.1
 # df2['Ef'] = 0.001*df1['Ef']
 
 st.write(df2[['b', 'd', 'fc', 'rohfl', 'Efl', 'fful', 'FRP longitudinal type', 'rohfw', 'Efw', 'ffuw', 'FRP web type', 'a/d']])
@@ -246,4 +248,3 @@ st.write('<style>h3{color: green;}</style>', unsafe_allow_html=True)
 
 #st.write("### For any comment or furthermore assistance contact: tgwakjira@gmail.com [Tadesse G. Wakjira](https://scholar.google.com/citations?user=Ka3iXSoAAAAJ)")
 # st.write("### For any comments, please contact tgwakjira@gmail.com")
-
