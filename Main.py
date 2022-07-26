@@ -224,26 +224,26 @@ st.write('---')
 
 
 
-# # SHAP explanation
-# #st.header('Model explanation using SHAP approach and significance of the input factors')
-# html_temp = """
-# <div style="background-color:gray ;padding:10px">
-# <h2 style="color:white;text-align:center;">Model explanation using SHAP approach and significance of the input factors </h2>
-# </div>
-# """
-# st.markdown(html_temp, unsafe_allow_html=True)
+# SHAP explanation
+#st.header('Model explanation using SHAP approach and significance of the input factors')
+html_temp = """
+<div style="background-color:gray ;padding:10px">
+<h2 style="color:white;text-align:center;">Model explanation using SHAP approach and significance of the input factors </h2>
+</div>
+"""
+st.markdown(html_temp, unsafe_allow_html=True)
 
-# st.markdown('## **SHAP summary plot**')
-# image = Image.open('shap_plot.png')
-# st.image(image, use_column_width=True)
-# #st.markdown('## **Significance and effect of each parameter**')
-# #image = Image.open('importance_plot.tiff')
-# #st.image(image, use_column_width=True)
-# #st.markdown('**Positive effect increases the load-carrying capacity, while negative effect reduces the load-carrying capacity**')
+st.markdown('## **SHAP summary plot**')
+image = Image.open('shap_plot.png')
+st.image(image, use_column_width=True)
+#st.markdown('## **Significance and effect of each parameter**')
+#image = Image.open('importance_plot.tiff')
+#st.image(image, use_column_width=True)
+#st.markdown('**Positive effect increases the load-carrying capacity, while negative effect reduces the load-carrying capacity**')
 
-# st.write('<style>h1{color: red;}</style>', unsafe_allow_html=True)
-# st.write('<style>h3{color: green;}</style>', unsafe_allow_html=True)
+st.write('<style>h1{color: red;}</style>', unsafe_allow_html=True)
+st.write('<style>h3{color: green;}</style>', unsafe_allow_html=True)
 
-# #st.write("### For any comment or furthermore assistance contact: tgwakjira@gmail.com [Tadesse G. Wakjira](https://scholar.google.com/citations?user=Ka3iXSoAAAAJ)")
-# # st.write("### For any comments, please contact tgwakjira@gmail.com")
+#st.write("### For any comment or furthermore assistance contact: tgwakjira@gmail.com [Tadesse G. Wakjira](https://scholar.google.com/citations?user=Ka3iXSoAAAAJ)")
+# st.write("### For any comments, please contact tgwakjira@gmail.com")
 
