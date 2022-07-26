@@ -233,9 +233,9 @@ html_temp = """
 """
 st.markdown(html_temp, unsafe_allow_html=True)
 
-st.markdown('## **SHAP summary plot**')
-image = Image.open('shap_plot.png')
-st.image(image, use_column_width=True)
+# st.markdown('## **SHAP summary plot**')
+# image = Image.open('shap_plot.png')
+# st.image(image, use_column_width=True)
 #st.markdown('## **Significance and effect of each parameter**')
 #image = Image.open('importance_plot.tiff')
 #st.image(image, use_column_width=True)
