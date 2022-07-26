@@ -10,7 +10,6 @@ EXPANDER_TEXT = """
     """
     
 READ_ME = """
-This app is under development. 
 To use the app, define the values of the predictors using sliders on the left side of the screen. 
 The defined beam parameters are displayed under the section "User defined parameters"
 the predicted Shear capacity of the beam will be updated under the section "Predicted Shear Capacity".
@@ -33,7 +32,6 @@ html_temp = """
 <div style="background-color:black ;padding:10px">
 <h2 style="color:cyan;text-align:center;"> 
 Shear Capacity Prediction of FRP-RC Beams Using ML model 
-(under development)
 </h2>
 </div>
 """
