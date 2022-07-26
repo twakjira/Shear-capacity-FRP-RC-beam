@@ -31,7 +31,7 @@ backgroundColor = '#273346'
 html_temp = """
 <div style="background-color:black ;padding:10px">
 <h2 style="color:cyan;text-align:center;"> 
-Shear Capacity Prediction of FRP-RC Beams Using ML model 
+Shear Capacity Prediction of FRP-RC Beams Using Machine Learning 
 </h2>
 </div>
 """
@@ -223,15 +223,23 @@ st.write('### Shear capacity (kN) =', y1)
 st.write('---')
 
 
-# # SHAP explanation
-# #st.header('Model explanation using SHAP approach and significance of the input factors')
-# html_temp = """
-# <div style="background-color:gray ;padding:10px">
-# <h2 style="color:white;text-align:center;">Model explanation using SHAP approach and significance of the input factors </h2>
-# </div>
-# """
-# st.markdown(html_temp, unsafe_allow_html=True)
 
+# SHAP explanation
+#st.header('Model explanation using SHAP approach and significance of the input factors')
+html_temp = """
+<div style="background-color:gray ;padding:10px">
+<h2 style="color:white;text-align:center;">Model explanation using SHAP approach and significance of the input factors </h2>
+</div>
+"""
+st.markdown(html_temp, unsafe_allow_html=True)
+
+st.markdown('## **SHAP summary plot**')
+image = Image.open('shap_plot.png')
+st.image(image, use_column_width=True)
+#st.markdown('## **Significance and effect of each parameter**')
+#image = Image.open('importance_plot.tiff')
+#st.image(image, use_column_width=True)
+#st.markdown('**Positive effect increases the load-carrying capacity, while negative effect reduces the load-carrying capacity**')
 
 st.write('<style>h1{color: red;}</style>', unsafe_allow_html=True)
 st.write('<style>h3{color: green;}</style>', unsafe_allow_html=True)
