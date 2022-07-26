@@ -218,7 +218,7 @@ html_temp = """
 </div>
 """
 st.markdown(html_temp, unsafe_allow_html=True)
-st.write('### Shear capacity (kN) =', y1)
+st.write('## Shear capacity (kN) =', y1)
 
 st.write('---')
 
