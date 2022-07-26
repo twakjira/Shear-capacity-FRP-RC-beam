@@ -4,4 +4,3 @@ xgboost==1.1.1
 streamlit==0.85.0
 pillow==8.2.0
 openpyxl==3.0.7
-scikit-learn==1.0.1
